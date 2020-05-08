@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-# Test
-
 用于记录学习git和github的一些笔记；
+
 =======
 # github-git-
 用于记录 个人学习git和github的笔记
