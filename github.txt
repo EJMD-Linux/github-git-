@@ -1,0 +1,249 @@
+290051524@qq.com
+
+GUO290051524666@
+
+
+
+
+
+郭春春~~
+
+64202818+EJMD-Linux@users.noreply.github.com
+
+
+
+
+
+
+
+
+
+git push到GitHub的时候遇到! [rejected] master -> master (non-fast-forward)的问题：
+
+1、git pull origin master --allow-unrelated-histories     把远程仓库和本地同步，消除差异
+
+2、重新add和commit相应文件
+
+3、git push origin master
+
+4、此时就能够上传成功了
+
+
+
+
+
+
+
+
+
+***如何推送github代码***
+
+第一步：去github上创建自己的Repository，获得新建的仓库的https地址；
+
+第二步：将README.md从github远程仓库带过来：
+echo "# Test" >> README.md
+
+第三步：**建立git仓库**
+git init
+
+第四步：将项目的所有文件添加到仓库中
+git add --all
+
+第五步：
+git add README.md
+
+第六步：提交到仓库
+git commit -m "注释语句"
+
+第七步：将本地的仓库关联到GitHub，后面的https改成刚刚自己的地址，上面的红框处
+git remote add origin https://github.com/zlxzlxzlx/Test.git
+
+第八步：上传github之前pull一下
+git pull origin master
+
+第九步：上传代码到GitHub远程仓库
+git push -u origin master
+
+中间可能会让你输入Username和Password，你只要输入github的账号和密码就行了。执行完后，如果没有异常，等待执行完就上传成功了。
+
+
+
+
+
+
+
+
+
+***更新代码***
+
+第一步：查看当前的git仓库状态，可以使用git status
+git status
+
+第二步：更新全部
+git add *
+
+第三步：接着输入git commit -m "更新说明"
+git commit -m "更新说明"
+
+第四步：先git pull,拉取当前分支最新代码
+
+git pull
+
+第五步：push到远程master分支上
+
+git push origin master
+
+
+
+
+
+
+
+
+
+
+让本地工作区跟踪远程的服务器，这样一旦两者之间有不一致的地方就会警告：
+
+git branch --set-upstream-to=origin/(远程服务器中的分支名) (本地工作区的分支名)
+
+比如：  git branch --set-upstream-to=origin/master dev
+
+这样一来，本地分支和远程分支就会一致，一旦本地有改变（必须要commit才可以），就会有提示
+说明可以用  git push  来直接将更新提交上去；
+
+
+
+
+
+
+
+
+
+
+***从远程分支上拉取代码***
+
+git pull origin (远程分支的分支名)
+（将代码拉取到本地）
+
+
+
+
+
+
+
+
+一般来说，master主分支是用于发行版本的，开发上传的分支是dev;
+在dev上开发、更新与维护软件，完成后上传到远程的dev分支上；
+
+
+
+
+
+
+
+
+***当在push后出现***
+Username for 'https://github.com': 输入的是github上的    邮箱账号   , 而不是github中设置的username, 这是个巨坑!!!
+Password for HTTP 或者是 SSH 你的github邮箱@github.com': 输入github的登录密码,点击enter键即可.
+
+
+
+
+
+
+
+
+
+
+Git clone 可以指定某个分支而不是整个版本仓库：（不能只clone一个文件或文件夹）
+
+git clone 只能clone整个仓库，下面用这个命令就可实现clone单个分支：
+
+一般是这样clone整个库：    git clone http://admin@192.168.1.101:7070/r/virtualbox_all_versions.git
+
+clone单个分支可以用：       git clone -b branchA http://admin@192.168.1.101:7070/r/virtualbox_all_versions.git
+
+
+
+
+
+
+
+
+
+
+
+
+虚拟机连不上网：
+
+1.
+cd /etc/sysconfig/network-scripts打开配置文件
+
+vi ifcfg-ens33这里可能你的文件名不是这个，但是找前面是 ifcfg-ens 的就是了
+
+将文件里的 ONBOOT=no，改为ONBOOT=yes，然后保存并退出（不要忘记保存！！）
+
+
+2.
+
+service network restart
+
+
+3.
+
+若2失败且出现Failed to start LSB: Bring up/down networking.
+
+
+Google答案，跟系统自带的NetworkManager这个管理套件有关系，关掉就可以解决。
+
+systemctl stop NetworkManager
+
+systemctl disable NetworkManager
+
+ 
+
+
+
+
+重新启动网络：
+
+systemctl start network.service
+
+或重启reboot，再次查看网络systemctl status network。
+
+
+
+
+
+
+
+
+
+
+
+
+C程序  测算程序运行时间：
+
+#include <time.h>
+直接在return 0；前面加上：
+
+printf("Time used = %lf\n",(double)clock() / CLOCKS_PER_SEC);
+
+
+生成随机数、数组复制函数；（百度即可）
+
+KMP算法：  http://www.ruanyifeng.com/blog/2013/05/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm.html
+
+
+
+
+
+
+
+
+
+
+用vmware设置、选项中的共享文件夹即可完成本机上主机和虚拟机的文件传输，但是传输到其它电脑则用ftp ;
+
+
+
