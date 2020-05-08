@@ -3,17 +3,31 @@
 
 
 
-github 账户：
-290051524@qq.com
 
+
+github 账户：                                                         //一般都是用这个
+
+290051524@qq.com                       
 GUO290051524666@
 
 
 
-郭春春~~
 
+
+
+
+
+郭春春^~^
 64202818+EJMD-Linux@users.noreply.github.com
 
+
+
+
+
+
+
+Username for 'https://github.com': 输入的是github上的邮箱账号, 而不是github中设置的username, 这是个巨坑!!!
+Password for 'https://你的github邮箱@github.com': 输入github的登录密码,点击enter键即可.
 
 
 
